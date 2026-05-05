@@ -128,11 +128,7 @@ body {
   margin: 0 auto;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  color: var(--accent-color);
-  margin-bottom: 1.25rem;
-}
+
 
 .features-list {
   list-style: none;

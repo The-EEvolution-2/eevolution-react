@@ -96,7 +96,6 @@ const Explore = () => {
                 { title: "Donators Hall", icon: <Landmark />, description: "List of visionaries who powered the platform.", link: "/donators" },
                 { title: "Top Contributors", icon: <Heart />, description: "Recognition of students sharing study materials.", link: "/contributors" },
                 { title: "Batch Memories", icon: <Image />, description: "A digital album of our collective journey.", link: "/memories", badge: "New" },
-                { title: "About Us", icon: <Info />, description: "Know the team and mission behind EEvolution.", link: "/about", isPublic: true },
             ]
         }
     ];

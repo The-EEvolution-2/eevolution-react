@@ -25,7 +25,6 @@ import Chat from './pages/Chat';
 import Support from './pages/Support';
 import MAR from './pages/MAR';
 import MOOCS from './pages/MOOCS';
-import About from './pages/About';
 import Pricing from './pages/Pricing';
 import Payment from './pages/Payment';
 
@@ -95,7 +94,7 @@ const AppLayout = () => {
           <Route path="/support" element={<Support />} />
           <Route path="/tracker/mar" element={<MAR />} />
           <Route path="/tracker/moocs" element={<MOOCS />} />
-          <Route path="/about" element={<About />} />
+
           <Route path="/admin" element={<Admin />} />
           <Route path="/settings/theme" element={<Appearance />} />
           <Route path="/settings/password" element={<Security />} />
