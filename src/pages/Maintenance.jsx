@@ -1,125 +1,81 @@
 import React from 'react';
-import { 
-    CheckCircle2, 
-    Sparkles, 
-    ShieldCheck, 
-    Mail, 
-    Heart, 
-    Cpu, 
-    Calendar,
-    ArrowRight
-} from 'lucide-react';
+import { Settings, Wrench, ShieldCheck, Mail, Heart, Database, Sparkles } from 'lucide-react';
 import './Maintenance.css';
 
 const Maintenance = () => {
     return (
-        <div className="m-wrapper">
-            {/* Ambient elegant background */}
-            <div className="m-bg-glow"></div>
-            <div className="m-grid"></div>
+        <div className="maintenance-wrapper">
+            {/* Background glowing blobs */}
+            <div className="glow-orb glow-orb-1"></div>
+            <div className="glow-orb glow-orb-2"></div>
+            <div className="glow-orb glow-orb-3"></div>
 
-            <div className="m-card">
-                {/* Status Header */}
-                <div className="m-header">
-                    <div className="m-logo">
-                        <Cpu size={22} className="m-logo-icon" />
-                        <span className="m-logo-text">EEvolution <span className="m-ver">v2.0</span></span>
+            <div className="maintenance-card">
+                {/* Header Icon Animation */}
+                <div className="maintenance-icon-container">
+                    <div className="icon-ring-outer"></div>
+                    <div className="icon-ring-inner"></div>
+                    <div className="gear-spinner">
+                        <Settings size={48} className="gear-icon" />
                     </div>
-                    <div className="m-status-badge">
-                        <span className="m-status-pulse"></span>
-                        <span>Upgrading Core Systems</span>
+                    <div className="wrench-overlay">
+                        <Wrench size={24} className="wrench-icon" />
+                    </div>
+                    <div className="sparkle-badge">
+                        <Sparkles size={16} className="sparkle-icon" />
                     </div>
                 </div>
 
-                <div className="m-content-grid">
-                    {/* LEFT COLUMN: Progress & Info */}
-                    <div className="m-left-col">
-                        <div className="m-info-section">
-                            <span className="m-section-label">Upgrade Roadmap</span>
-                            <div className="m-timeline">
-                                <div className="m-timeline-item completed">
-                                    <div className="m-timeline-icon">
-                                        <CheckCircle2 size={16} />
-                                    </div>
-                                    <div className="m-timeline-details">
-                                        <h6>Semester Wrap-up</h6>
-                                        <p>Data backup & course archiving completed.</p>
-                                    </div>
-                                </div>
+                {/* Content */}
+                <span className="maintenance-badge">Maintenance Mode</span>
+                <h1 className="maintenance-title">
+                    EEvolution <span className="highlight-text">is Upgrading</span>
+                </h1>
+                
+                <p className="maintenance-subtitle">
+                    Preparing for the next semester with a powerful new core.
+                </p>
 
-                                <div className="m-timeline-item active">
-                                    <div className="m-timeline-icon">
-                                        <Sparkles size={14} className="m-pulse-sparkle" />
-                                    </div>
-                                    <div className="m-timeline-details">
-                                        <h6>Database Integration</h6>
-                                        <p>Migrating to a dedicated secure backend database.</p>
-                                    </div>
-                                </div>
+                <div className="maintenance-divider"></div>
 
-                                <div className="m-timeline-item pending">
-                                    <div className="m-timeline-icon">
-                                        <ArrowRight size={14} />
-                                    </div>
-                                    <div className="m-timeline-details">
-                                        <h6>v2 UI & New Sections</h6>
-                                        <p>Deploying redesigned dashboard and features.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div className="maintenance-message">
+                    <p>
+                        As the semester has ended and classes are temporarily inactive, we are transitioning EEvolution to a major new version. During this scheduled downtime, we are integrating a robust backend database architecture, introducing a completely redesigned modern user interface, and building brand-new features to elevate your academic experience.
+                    </p>
+                    <p className="highlight-quote">
+                        "Thank you for an incredible year of cooperation, engagement, and the financial support that kept our servers running and EEvolution alive."
+                    </p>
+                    <p>
+                        We would love to know how you enjoyed EEvolution this past year! Email us to share your stories, experience, or any ideas on how we can improve.
+                    </p>
+                </div>
 
-                        {/* Security Assurance Card */}
-                        <div className="m-security-card">
-                            <ShieldCheck size={20} className="m-sec-icon" />
-                            <div className="m-sec-text">
-                                <h6>Data Protection</h6>
-                                <p>Your profiles, course notes, and history are encrypted and safe in our servers.</p>
-                            </div>
-                        </div>
+                {/* Security Box */}
+                <div className="security-assurance">
+                    <div className="security-icon-box">
+                        <ShieldCheck size={20} className="security-icon" />
                     </div>
-
-                    {/* RIGHT COLUMN: Announcement Message */}
-                    <div className="m-right-col">
-                        <h1 className="m-title">
-                            We are preparing <br />
-                            <span className="m-gradient">something special.</span>
-                        </h1>
-                        
-                        <p className="m-subtitle">
-                            EEvolution is undergoing scheduled maintenance to transition to a more powerful core.
-                        </p>
-
-                        <div className="m-letter">
-                            <p>Dear EEvolution Community,</p>
-                            <p>
-                                As the semester has ended and active classes are paused, we are taking EEvolution offline for a major upgrade. We are introducing a dedicated backend database system and a completely fresh user interface with brand new sections.
-                            </p>
-                            <p className="m-highlight-text">
-                                Thank you for a year filled with cooperation, engagement, and the generous financial support that kept EEvolution running. This platform is built on your trust.
-                            </p>
-                            <p>
-                                We would love to hear from you during this period! Email us to share how you enjoyed being part of EEvolution and what improvements we can make.
-                            </p>
-                        </div>
-
-                        {/* CTA Action button */}
-                        <div className="m-actions">
-                            <a 
-                                href="mailto:jcsayan7@gmail.com?subject=EEvolution%20v2%20Suggestions%20%26%20Feedback" 
-                                className="m-cta-btn"
-                            >
-                                <Mail size={16} />
-                                <span>Email Us Your Feedback</span>
-                            </a>
-                        </div>
+                    <div className="security-text">
+                        <h4>Data Security Guaranteed</h4>
+                        <p>All your user profiles, study materials, and records are stored safely and securely in our database servers.</p>
                     </div>
+                </div>
+
+                {/* Email Action */}
+                <div className="action-container">
+                    <a 
+                        href="mailto:jcsayan7@gmail.com?subject=My%20EEvolution%20Experience%20%26%20Feedback" 
+                        className="email-button"
+                    >
+                        <Mail size={18} />
+                        <span>Share Your Experience</span>
+                    </a>
                 </div>
 
                 {/* Footer Signature */}
-                <div className="m-footer">
-                    <span>Designed with</span>
-                    <Heart size={12} className="m-heart-icon" />
+                <div className="maintenance-footer">
+                    <span>Made with</span>
+                    <Heart size={14} className="heart-icon" />
                     <span>for students, by EEvolution Team</span>
                 </div>
             </div>
