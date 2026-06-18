@@ -28,6 +28,8 @@ import MOOCS from './pages/MOOCS';
 import Pricing from './pages/Pricing';
 import Payment from './pages/Payment';
 
+import Maintenance from './pages/Maintenance';
+
 // A wrapper component to access the current location
 const AppLayout = () => {
   const location = useLocation();
@@ -107,17 +109,7 @@ const AppLayout = () => {
 };
 
 function App() {
-  const [showEntry, setShowEntry] = React.useState(true);
-
-  return (
-    <Router>
-      {showEntry ? (
-        <EntryScreen onComplete={() => setShowEntry(false)} />
-      ) : (
-        <AppLayout />
-      )}
-    </Router>
-  );
+  return <Maintenance />;
 }
 
 export default App;
